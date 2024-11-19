@@ -1,73 +1,84 @@
+/* Estilo principal del contenedor de características */
 .contenedor_caracteristicasBitacoras {
   grid-column: span 2;
   grid-row: span 2;
-  padding: 30px;
+  padding: 35px;
   border: 1px solid #ddd; /* Borde sutil */
-  border-radius: 20px; /* Bordes más redondeados */
-  background: #ffffff; /* Fondo limpio y claro */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 15px; /* Bordes más redondeados */
+  background: #fafafa; /* Fondo gris claro */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Sombra suave */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+/* Efecto hover del contenedor */
 .contenedor_caracteristicasBitacoras:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Sombra más destacada */
-  transform: translateY(-10px); /* Levitación más marcada */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* Sombra más destacada */
+  transform: translateY(-8px); /* Levantamiento más sutil */
 }
 
+/* Estilo para el contenedor de prueba */
 .prueba {
   display: flex;
-  gap: 25px; /* Espacio más amplio entre los elementos */
+  gap: 20px; /* Espacio moderado entre los elementos */
   justify-content: center;
-  flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
+  flex-wrap: wrap; /* Ajuste en pantallas pequeñas */
+  margin-top: 20px;
 }
 
+/* Estilo para el título */
 #Titulo_caracteristicasBitacoras {
   grid-column: span 2;
   grid-row: span 1;
   width: 80%;
-  margin: 25px auto;
-  font-size: 2.8rem;
-  font-weight: bold;
+  margin: 30px auto;
+  font-size: 2.5rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff; /* Texto blanco */
+  color: #333; /* Texto oscuro para mayor legibilidad */
   text-align: center;
-  padding: 25px;
-  background: linear-gradient(90deg, #95a5a6, #bdc3c7, #95a5a6); /* Gradiente atractivo */
-  border-radius: 15px;
-  transition: background 0.5s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  padding: 20px;
+  background: linear-gradient(90deg, #bdc3c7, #95a5a6, #bdc3c7); /* Gradiente gris */
+  border-radius: 12px;
   cursor: pointer;
-  letter-spacing: 3px; /* Espaciado amplio para mayor impacto */
+  letter-spacing: 2px; /* Espaciado moderado */
+  transition: background 0.4s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* Efecto hover del título */
 #Titulo_caracteristicasBitacoras:hover {
-  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5); /* Sombra más suave y destacada */
-  transform: scale(1.1); /* Efecto de zoom más pronunciado */
-  background: linear-gradient(90deg, #bdc3c7, #95a5a6, #bdc3c7); /* Inversión del gradiente */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Sombra suave al pasar */
+  transform: scale(1.05); /* Efecto de zoom sutil */
+  background: linear-gradient(90deg, #95a5a6, #bdc3c7, #95a5a6); /* Inversión del gradiente */
 }
 
+/* Estilo para los párrafos dentro de las características */
 .bitacora-details p {
-  margin: 20px 0;
-  padding: 15px 20px; /* Mayor relleno */
-  border-radius: 12px; /* Bordes más suaves */
-  font-size: 1.2rem; /* Mejor tamaño de fuente */
-  line-height: 1.7; /* Mejor espaciado para lectura */
-  background-color: #f4f6f7; /* Fondo suave */
+  margin: 15px 0;
+  padding: 12px 18px; /* Relleno moderado */
+  border-radius: 10px; /* Bordes suaves */
+  font-size: 1.1rem; /* Tamaño de fuente moderado */
+  line-height: 1.6; /* Espaciado adecuado */
+  background-color: #f5f5f5; /* Fondo gris suave */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Estilo para los textos resaltados */
 .bitacora-details p strong {
-  color: #e67e22; /* Naranja cálido para resaltar títulos */
+  color: #7f8c8d; /* Gris más oscuro para resaltar */
 }
 
+/* Estilo para párrafos impares */
 .bitacora-details p:nth-child(odd) {
-  background-color: #ffffff; /* Fondo blanco para mayor contraste */
+  background-color: #ffffff; /* Fondo blanco para contraste */
 }
 
+/* Estilo para párrafos pares */
 .bitacora-details p:nth-child(even) {
-  background-color: #f9f9f9; /* Gris claro suave */
+  background-color: #f2f2f2; /* Gris claro para variación sutil */
 }
 
+/* Efecto hover en los párrafos */
 .bitacora-details p:hover {
-  transform: scale(1.02); /* Efecto de agrandar sutil */
-  background-color: #e1e8eb; /* Fondo más intenso al pasar el cursor */
+  transform: scale(1.02); /* Sutil aumento de tamaño */
+  background-color: #e0e0e0; /* Fondo gris más oscuro al pasar */
 }

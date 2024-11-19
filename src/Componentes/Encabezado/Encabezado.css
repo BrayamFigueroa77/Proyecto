@@ -36,7 +36,7 @@ nav img {
 header {
   margin: 0;
   position: relative;
-  height: 150px;
+  min-height: 300px; /* Se ajusta al contenido pero con un mínimo */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,13 +45,13 @@ header {
   text-align: center;
   border-bottom: 5px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  overflow: hidden; /* Ocultar cualquier contenido que sobresalga */
+  overflow: hidden;
 }
 
 /* Capas de imágenes para el efecto de desvanecimiento */
 header::before,
 header::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -64,19 +64,18 @@ header::after {
 }
 
 header::before {
-  background-image: url("https://img.freepik.com/fotos-premium/abraza-naturalezas-abraza-flores-pastel-suaves-botanicos-plan-patron-floral-costuras_898826-25144.jpg");
+  background-image: url('https://img.freepik.com/fotos-premium/abraza-naturalezas-abraza-flores-pastel-suaves-botanicos-plan-patron-floral-costuras_898826-25144.jpg');
   animation: fadeBackground 15s infinite;
 }
 
 header::after {
-  background-image: url("https://images.unsplash.com/photo-1507646871303-331b8f659227?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2FtcG8lMjBib3QlQzMlQTFuaWNvfGVufDB8fDB8fHww");
+  background-image: url('https://images.unsplash.com/photo-1507646871303-331b8f659227?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2FtcG8lMjBib3QlQzMlQTFuaWNvfGVufDB8fDB8fHww');
   animation: fadeBackground 15s infinite 7.5s; /* Inicia a mitad del ciclo */
 }
 
 /* Animación de desvanecimiento */
 @keyframes fadeBackground {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
   50% {
@@ -86,16 +85,18 @@ header::after {
 
 /* Título estilizado */
 .Titulo {
-  margin-top: 1%;
+  margin-top: 3%; /* Aumenta el margen superior para bajarlo un poco más */
   margin-bottom: -1.5%;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
+  color: white; /* El título es blanco */
   letter-spacing: 5px;
-  text-shadow: 0 0 15px #000, 0 0 25px #000, 0 0 50px #000, 0 0 80px #000;
+  text-shadow: 0 0 15px #000000, 0 0 25px #000000, 0 0 50px #000000, 0 0 80px rgba(0, 0, 0, 0.8); /* Sombra negra */
   font-weight: 700;
   z-index: 2;
 }
+
 
 /* Indicadores de imagen activa (puntos) */
 .header-dots {
@@ -120,49 +121,56 @@ header::after {
 }
 
 /* Estilos para los botones en el encabezado */
+/* Estilos para los botones en el encabezado */
 .botones_encabezado {
+  position: absolute; /* Permite posicionarlos en el encabezado */
+  top: 20px; /* Ubica los botones en la parte superior */
+  right: 20px; /* Ajusta la distancia desde el borde derecho */
   display: flex;
-  margin: 0;
-  right: 40px;
-  margin: 0;
-  z-index: 1;
+  flex-direction: row; /* Mantiene los botones en una fila */
+  gap: 10px; /* Espaciado entre los botones */
+  z-index: 1; /* Asegura que estén visibles */
 }
 
 .botones_encabezado button {
-  padding: 10px 20px;
-  background-color: rgba(186, 206, 212, 0.753);
-  color: #000000;
-  border: 2px solid #ecf0f1;
-  border-radius: 50px;
-  font-size: 1rem;
+  padding: 10px 15px; /* Botones más compactos en largo */
+  background-color: transparent; /* Fondo transparente por defecto */
+  color: #ffffff; /* Texto blanco */
+  border: 2px solid #ffffff; /* Borde blanco */
+  border-radius: 25px; /* Estilo redondeado */
+  font-size: 1rem; /* Tamaño de texto ajustado */
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9); /* Sombra blanca más intensa en el texto */
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.6); /* Sombra inicial más prominente */
 }
 
 .botones_encabezado button:hover {
-  background-color: #ecf0f1;
-  color: #2d3436;
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-color: white; /* Borde cambia a gris oscuro */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo gris claro semitransparente */
+  transform: translateY(-2px); /* Efecto de levantamiento */
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.9); /* Sombra blanca aún más intensa */
+}
+
+.botones_encabezado button:active {
+  transform: translateY(0); /* Vuelve a la posición inicial al hacer clic */
+  background-color: rgba(127, 140, 141, 0.2); /* Fondo gris más oscuro */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Sombra más tenue al presionar */
 }
 
 /* Media query para dispositivos más pequeños */
 @media (max-width: 768px) {
-  header {
-    height: 250px;
-  }
-
-  .Titulo {
-    font-size: 3rem;
-  }
-
   .botones_encabezado {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Apila los botones verticalmente */
     top: 10px;
     right: 10px;
+    gap: 10px;
   }
+  .botones_encabezado button{
+    padding: 12px 20px;
+    font-size:0.9rem;
+  }
+
 }

@@ -4,7 +4,7 @@ import { db } from "../../Firebase/FirebaseConfig";
 import { useNavigate } from "react-router-dom";
 import Mapa from "../Mapa/Mapa"; // Importa el componente del mapa
 import "./InicioBitacora.css";
-import CrearPDF from "../../Componentes/crearPDF/crearPDF";
+import CrearPDF from "../../Componentes/CrearPDF/CrearPDF.jsx";
 
 const InicioBitacora = () => {
   const navigate = useNavigate();
